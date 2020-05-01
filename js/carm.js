@@ -4,16 +4,26 @@ var carm = {
     mazza: false
 };
 
+var buttons = [];
 function load(scenes, number){
-    document.body.innerHTML = ""; //pulisce scena precedente
-    document.write(scenes[number].text); //dialogo
+    //tolgo bottoni scena precedente
+    while(buttons.length != 0){
+	buttons[0].parentNode.removeChild(buttons[0]);
+	buttons.splice(0,1);
+    }
+    //scrivo il testo
+    var testo = document.getElementById("testo");
+    testo.innerHTML = scenes[number].text+"<br>";
+ 
     //per ogni azione, creo il bottone corrispondente e associo l'event listener
     scenes[number].actions.forEach( 
 	function(item){
 	    var btn = document.createElement("BUTTON");
 	    btn.innerHTML = item.label;
 	    btn.addEventListener("click", function(){ item.action(carm); });
-	    document.body.appendChild(btn); 
+	    document.getElementById("testo").appendChild(btn);
+	    //$("actualBox").append(btn);
+	    buttons.push(btn); //push in buttons per poterli togliere dopo
 	}
     );
 }
