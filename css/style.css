@@ -1,8 +1,19 @@
+
+@font-face {
+  /*Custom font of persona 5*/
+  font-family: persona;
+  src: url(../fonts/p5hatty.ttf);
+}
+
+
+
+
 body{
   min-width: 100vw;
   min-height: 100vh;
   background: url('https://source.unsplash.com/random') no-repeat;
   background-size: 100%;
+  font-family: persona;
 }
 
 .upperScreen{
@@ -14,12 +25,13 @@ body{
 
 }
 
+/*
 .actualBox{
   background-color: black;
   border-style: double;
   border-color: white;
   border-width: thick;
-}
+}*/
 
 .player{
   max-width: auto;
