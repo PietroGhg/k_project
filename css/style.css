@@ -25,13 +25,13 @@ body{
 
 }
 
-/*
+
 .actualBox{
-  background-color: black;
-  border-style: double;
-  border-color: white;
-  border-width: thick;
-}*/
+  background-image: url(../img/dialogBox.png);
+  background-size: 100% 100%;
+  background-repeat: none;
+  color: white;
+}
 
 .player{
   max-width: auto;
