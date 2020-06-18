@@ -14,12 +14,13 @@ function load(scenes, number){
     //scrivo il testo
     var testo = document.getElementById("testo");
     testo.innerHTML = scenes[number].text+"<br>";
- 
+
     //per ogni azione, creo il bottone corrispondente e associo l'event listener
-    scenes[number].actions.forEach( 
+    scenes[number].actions.forEach(
 	function(item){
 	    var btn = document.createElement("BUTTON");
 	    btn.innerHTML = item.label;
+      btn.classList.add("ps5-btn");
 	    btn.addEventListener("click", function(){ item.action(carm); });
 	    document.getElementById("testo").appendChild(btn);
 	    //$("actualBox").append(btn);
@@ -27,7 +28,7 @@ function load(scenes, number){
 	}
     );
 }
-	
+
 var scenes = {
     1:{
 	text: "hai un topastro davanti a te",
@@ -59,4 +60,3 @@ var scenes = {
 };
 
 load(scenes, 4);
-

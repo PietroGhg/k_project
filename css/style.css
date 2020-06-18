@@ -28,9 +28,26 @@ body{
 
 .actualBox{
   background-image: url(../img/dialogBox.png);
-  background-size: 100% 100%;
-  background-repeat: none;
+  background-size: contain;
+  background-repeat: no-repeat;
   color: white;
+}
+
+#testo{
+ padding-left: 6vw;
+ padding-top: 9.2vh;
+}
+
+.ps5-btn{
+  background: none;
+  border-style: none;
+  color:white;
+}
+
+.ps5-btn:hover{
+  background: none;
+  border-style: inset;
+  color:white;
 }
 
 .player{
